@@ -11,7 +11,7 @@
         </style>        
         <!--<page-search></page-search>-->
         <template is="dom-if" if="{{_hasResults}}">
-            <section>
+            <section class="card-list">
                 <template is="dom-repeat" items="{{_elems}}">
                    <card-component data={{item}}></card-component> 
                 </template>
