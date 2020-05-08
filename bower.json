@@ -1,0 +1,24 @@
+{
+  "name": "card-list",
+  "dependencies": {
+    "polymer": "Polymer/polymer#^2.0.0",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^1.0.0",
+    "card-component": "https://github.com/josecarlosdxu/polymer-card-component.git",
+    "card-pagination": "https://github.com/josecarlosdxu/polymer-pagination.git"
+  },
+  "private": true,
+  "homepage": "https://github.com/josecarlosdxu/polymer-card-list",
+  "authors": [
+    "Madrid Pepín <jamd@gft.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
