@@ -4,7 +4,8 @@
     "polymer": "Polymer/polymer#^2.0.0",
     "webcomponentsjs": "webcomponents/webcomponentsjs#^1.0.0",
     "card-component": "https://github.com/josecarlosdxu/polymer-card-component.git",
-    "card-pagination": "https://github.com/josecarlosdxu/polymer-pagination.git"
+    "card-pagination": "https://github.com/josecarlosdxu/polymer-pagination.git",
+    "page-search": "https://github.com/josecarlosdxu/polymer-page-search.git"
   },
   "private": true,
   "homepage": "https://github.com/josecarlosdxu/polymer-card-list",
