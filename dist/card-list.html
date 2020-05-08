@@ -3,46 +3,13 @@
 <link rel="import" href="../../polymer/lib/elements/dom-if.html">
 <link rel="import" href="../../card-component/dist/card-component.html">
 <link rel="import" href="../../card-pagination/dist/cells-pagination.html">
-<link rel="import" href="page-search.html">
+<!--<link rel="import" href="page-search.html">-->
+<link rel="import" href="card-list-style.html">
 <dom-module id="page-list">
     <template>
-         <style>
-            :host{
-                --cardWidth: var(--cardWidth, 12rem);
-                --gridGap: var(--gridGap, 2.5rem);
-                --borderRadius: var(--borderRadius 0.5em);
-                --cardListBoxShadow:  0 1px 1px rgba(16, 27, 30, 0.07), 0 2px 2px rgba(16, 27, 30, 0.07), 0 4px 4px rgba(16, 27, 30, 0.05), 0 8px 8px rgba(16, 27, 30, 0.07), 0 16px 16px rgba(16, 27, 30, 0.07);
-                --boxShadow: var(--boxShadow), var(--cardListBoxShadow));
-            }
-            section {
-                font-size: 0;
-                text-align: left;
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(var(--cardWidth), 204px));
-                grid-row-gap: var(--gridGap);
-                grid-column-gap: var(--gridGap);
-                grid-auto-flow: row dense;
-                margin: 0 auto;
-                padding: var(--gridGap);
-               
-            }
-            .no-results {
-                display: flex;
-                width: 100%;
-                height: 100%;
-                align-items: center;
-                justify-content: center;
-                position: fixed;
-                top: 0;
-                left: 0;
-                color:rgba(0,0,0,0.3);
-                pointer-events: none;
-            }
-            .no-results[hidden] {
-                display: none;
-            }
-        </style>
-        <page-search></page-search>
+        <style include="card-list-style">            
+        </style>        
+        <!--<page-search></page-search>-->
         <template is="dom-if" if="{{_hasResults}}">
             <section>
                 <template is="dom-repeat" items="{{_elems}}">
@@ -87,8 +54,9 @@
             }
 
             _dataChanged(newDataValue, oldDataValue) {
-                this._hasResults = newDataValue.length > 0;
+               this._hasResults = newDataValue.length > 0;
                this._numItems = newDataValue.length;
+               this._setElems(0);
             }
 
             ready() {

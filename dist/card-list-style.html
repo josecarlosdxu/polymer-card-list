@@ -1,0 +1,35 @@
+<dom-module id="card-style">
+<template>
+<style>
+	section {		
+		text-align: left;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(var(--cardWidth), 204px));
+		grid-row-gap: var(--gridGap);
+		grid-column-gap: var(--gridGap);
+		grid-auto-flow: row dense;
+		margin: 0 auto;
+		width: 100%;
+		padding: var(--gridGap);
+	}
+
+	.no-results {
+		display: flex;
+		width: 100%;
+		height: 100%;
+		align-items: center;
+		justify-content: center;
+		position: fixed;
+		top: 0;
+		left: 0;
+		color: rgba(0, 0, 0, 0.3);
+		pointer-events: none;
+	}
+
+	.no-results[hidden] {
+		display: none;
+	}
+
+</style>
+</template>
+</dom-module>
